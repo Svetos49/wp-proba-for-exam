@@ -9,3 +9,13 @@ function gitproba_assets() {
 }
 
 add_action( 'wp_enqueue_scripts', 'gitproba_assets' );
+
+/**
+ * This function add a custom class
+ */
+
+function gitproba_body_class( $classes ) {
+      $classes[] .= 'test-class';
+      return $classes;
+}
+add_filter( 'body-class', 'gitproba_body_class' );
